@@ -1,0 +1,9 @@
+{% include base_path %}
+
+{% if site.author.github %}
+  <meta name="author" content="{{ site.author.name | default: site.title }}">
+{% endif %}
+
+{% if page.excerpt %}
+  <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}">
+{% endif %}
